@@ -553,30 +553,15 @@ exports.loginPost = function(req, res) {
 					first_name: '',
 					age: ''
 				}
-				return res.render('members/register_smile', {user: _user, message: "Votre email n'existe pas sur MerciCharly, inscrivez vous!"});
+				return res.render('members/register_smile', {user: _user, message: "Votre email n'existe pas sur EasyExpress, inscrivez vous!"});
 			}
 			else if (!user.isValidPassword(req.body.password)) {
 				req.body.password = '';
 				return res.render('members/login', {user: req.body, message: "Mot de passe incorrecte"});
 			}
 			else {
-
 				req.user = user;
 				loginAndFinaliseRegistrationToken(req, res);
-
-				// req.login(user, function(err) {
-				// 	if (err) {
-				// 		res.render('500');
-				// 	} else {
-
-				// 		return res.render('members/loggedfb', {
-				// 			token: user.jwttoken,
-				// 			userm: user.email,
-				// 			userid: req.user._id
-				// 		});
-				// 	}
-				// });
-
 			}
 
 	});

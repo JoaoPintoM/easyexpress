@@ -1,101 +1,6 @@
-extends ../layout3
+extends ../layout
 
 block content
-
-	style.
-		body{
-		background: #f5f3ed;
-		}
-
-		.myyFbButton{
-			color: white;
-			background-color: #3b5998;
-			border: 0;
-			font-family: 'Lato';
-			text-transform: none;
-			font-size: 1.2em;
-		}
-		.myyFbButton:hover{
-			box-shadow: 0 4px 5px 0 rgba(0,0,0,0.2),0 2px 5px 0 rgba(0,0,0,0.19);
-		}
-
-		.modal-content.sModalLogin {
-			width: 70%;
-			max-width: 600px;
-			margin: auto;
-			margin-top: 15px;
-			margin-bottom: 40px;
-		}
-
-		.loginSection{
-			text-align:right;
-			margin-top: 20px;
-			margin-right: 40px;
-			position: absolute;
-			right: 10px;
-		}
-
-		.fbLoginForm{
-			padding-top: 10px;
-			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-		}
-
-		.fbLoginForm .head{
-			font-weight: 400;
-		}
-
-		.socialSection{
-			padding: 15px;
-		}
-		.loginSection p{
-			font-size: 1.2em;
-		}
-		.loginSection .login{
-
-		}
-
-		.share-btn.facebook{
-			border-radius:5px;
-			padding-top:15px !important;
-			padding-bottom:15px !important;
-		}
-
-		.share-btn.facebook:hover{
-			background-color: #19305f !important;
-		}
-
-		.emailgroup{
-			margin-bottom: 5px;
-		}
-
-		.localform{
-			padding: 10px 20px;
-		}
-
-		.btncharlysubmit{
-			background-color:#EC5D57;
-			-moz-border-radius:5px;
-			-webkit-border-radius:5px;
-			border-radius:5px;
-			border: 1px #5BA3B7;
-			cursor: pointer;
-			padding: 20px 25px;
-		}
-
-
-		.btncharlysubmit:hover{
-			background-color: #5BA3B7;
-			border: white;
-		}
-
-		#inputGodfather {
-			width: 200px;
-			margin: auto;
-			text-align: center;
-			margin-bottom: 20px;
-			margin-top: 25px;
-			background: #F5F5F5;
-		}
 
 	.modal-content.sModalLogin
 		.modal-header
@@ -106,23 +11,7 @@ block content
 		.modal-body
 			form(role='form', method='POST', action='login')
 				input(type="hidden", name="lang", value="#{lang}")
-				input(type='hidden', placeholder='Mot de passe*', name='password', value='smilefocus')
-				.row
-					.col-xs-12
-						center
-							.socialSection
-								a.btn.btn-default.share-btn.facebook.myyFbButton(href="/auth/facebook?myQuery=#{lang}", type='submit', class="btnInstall")
-									i.fa.fa-facebook.fa-lg
-										|  #{__("rContinueWithFB")}
-				.row
-					.col-xs-12
-						br
-
-						center
-							p ________________ #{__("or")} ________________
-							//- p #{message}
-
-						br
+				input(type='text', placeholder='Mot de passe*', name='password', value='yo')
 				.row
 					.col-xs-12
 						.form-group.col-xs-12.col-sm-12

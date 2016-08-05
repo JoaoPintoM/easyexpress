@@ -6,5 +6,9 @@
 	"rRegisterOn": "rRegisterOn",
 	"FirstName": "FirstName",
 	"rYourAge": "rYourAge",
-	"rILocalyRegister": "rILocalyRegister"
+	"rILocalyRegister": "rILocalyRegister",
+	"youmustbelogged": "youmustbelogged",
+	"lConnectOn": "lConnectOn",
+	"rContinueWithFB": "rContinueWithFB",
+	"or": "or"
 }
