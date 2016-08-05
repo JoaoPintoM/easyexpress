@@ -1,0 +1,27 @@
+extends ../layout3
+
+block content
+
+	.container
+
+		section.our-story.row
+			.col-xs-12
+				header.story-heading.section-header
+					h2
+						| #{__("mHowAreTitle")}
+						strong  #{__("mHowAreTitleBold")}
+				.row
+					.col-xs-12.col-sm-5
+						section.slider-wrap.flex-slide.flexslider
+							ul.slides
+								li
+									img(src='/assets/img/homepage/blog1.jpeg', alt='')
+								li
+									img(src='/assets/img/homepage/blog2.jpeg', alt='')
+					.col-xs-12.col-sm-7
+						strong.article-sammury
+							| #{__("mIntroHead")} 
+						p
+							| #{__("mIntroTxt")} 
+						p
+							| #{__("mIntroTxt2")} 

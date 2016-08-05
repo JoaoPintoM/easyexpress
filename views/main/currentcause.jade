@@ -1,0 +1,72 @@
+extends ../layout3
+
+block content
+
+	.container
+
+		section.our-story.row
+			.col-xs-12
+				header.story-heading.section-header
+					
+					if lang == 'fr'
+						h2
+							| Cause en cours
+					if lang == 'en'
+						h2
+							| Current cause
+				.row
+					.col-xs-12.col-sm-5
+						section.slider-wrap.flex-slide.flexslider
+							ul
+								li
+									img(src='/assets/img/homepage/cause1.jpeg', alt='')
+
+					.col-xs-12.col-sm-7
+						if lang == 'fr'
+							strong.article-sammury
+								| Pour aider les réfugies du monde entier, nous faisons des dons à L’Agence pour les réfugiés des Nations Unies (UNHCR).  
+							p
+								| L’une des urgences actuelles est la situation préoccupante de Syrie. En effet, depuis 2011, plus de quatre millions de personnes ont fui la Syrie, trouvant refuge au Liban, en Jordanie, en Iraq et au-delà. Des millions d’autres sont déplacées au sein du pays et, alors que la guerre se poursuit en Syrie, l’espoir s’estompe à grands pas. En dirigeant une action conjointe dans toute la région, le HCR travaille sans relâche pour leur venir en aide. Le HCR coopère avec ses partenaires, les ONG et les gouvernements hôtes pour offrir une aide vitale à ceux qui en ont le plus besoin.
+
+							p
+								| Le HCR apporte une aide vitale aux réfugiés syriens. Ils donnent de l’argent aux plus vulnérables pour qu’ils puissent acheter des médicaments et de la nourriture, des réchauds et du combustible pour se chauffer, des matériaux d’isolation pour les tentes, des couvertures thermiques et des vêtements d’hiver. Début 2016, alors que la guerre en Syrie est entrée dans sa sixième année et qu’aucun arrêt des combats n’est en vue, ils ont rejoint d’autres organisations humanitaires et de développement des Nations Unies pour lancer un appel à 7,73 milliards de dollars E.-U. d’aide vitale supplémentaire pour soutenir 22,5 millions de personnes en Syrie et dans la région.
+
+							p
+								| Le premier volet de l’appel est le Plan d’aide régionale pour les réfugiés et la résilience (3RP), mené par le HCR, qui lance un appel à 4,55 milliards de dollars E.-U. destinés à soutenir 4,8 millions de réfugiés dans la région et quatre millions de personnes dans les communautés qui les accueillent. Le deuxième volet de l’appel est le Plan de réponse humanitaire en Syrie 2016 qui vise à réunir près de 3,2 milliards de dollars E.-U. afin d’offrir un soutien et une protection humanitaires à 13,5 millions de personnes en Syrie.
+
+
+							p
+								| Des millions de Syriens continuent de traverser la frontière, fuyant les bombes et les balles qui ont détruit leur pays. La Turquie accueille plus de 2,7 millions de Syriens enregistrés par le HCR. La majorité d’entre eux vit en milieu urbain et environ 260 000 personnes se trouvent dans 23 camps des provinces de Hatay, Gaziantep, Kilis et Sanliurfa. Au Liban, la vie est une lutte quotidienne pour de nombreux réfugiés syriens qui vivent sans ressources financières ou presque. Environ 70 pour cent d’entre eux vivent en dessous du seuil de pauvreté avec moins de 3,84 dollars par personne et par jour. Il n’y a pas de camps de réfugiés officiels au Liban. Par conséquent, plus d’un million de Syriens enregistrés par le HCR vivent en milieu urbain dans plus de 1700 communautés différentes réparties à travers le pays. Ils partagent souvent des logements précaires et surpeuplés avec d’autres familles. En Jordanie, plus de 600 000 hommes, femmes et enfants vivent actuellement en exil. Environ 80 pour cent d’entre eux vivent en milieu urbain, tandis que 100 000 autres ont trouvé refuge dans les camps de Za’atari et Azraq. Ils sont nombreux à avoir atteint la Jordanie avec des moyens financiers très limités et ont du mal à couvrir leurs besoins les plus essentiels. Ceux qui pouvaient initialement compter sur leurs économies ou sur le soutien des familles d’accueil se trouvent maintenant de plus en plus dans le besoin. L’Iraq a également vu grandir le nombre de Syriens arrivant dans le pays. À l’heure actuelle, le pays en accueille près de 25 000, alors qu’en Égypte le HCR offre protection et assistance à environ 100 000 Syriens. Mais si la vie en exil peut être dure, elle est encore plus difficile pour les Syriens qui sont toujours bloqués chez eux.
+
+							strong.article-sammury
+								em La Syrie est la crise humanitaire et de réfugiés la plus importante de notre temps. Elle reste la cause de souffrances pour des millions de personnes et devrait provoquer un élan de soutien à travers le monde entier. 
+								p Filippo Grandi, Haut-Commissaire des Nations Unies pour les réfugiés
+
+						if lang == 'en'
+							strong.article-sammury
+								| To help refugees, we donate to the United Nations Refugee Agency (UNHCR).
+
+							p
+								| UNHCR works hard to help, leading a coordinated effort across the region. Together with their partners, NGOs and host governments, they offer a lifeline to those in need. Millions of Syrians are escaping across borders, fleeing the bombs and bullets that have devastated home.
+
+
+							p
+								| They provide life-saving humanitarian aid for Syrian refugees, helping the most vulnerable with cash for medicine and food, stoves and fuel for heating, insulation for tents, thermal blankets and winter clothing. In early 2016, with Syria’s war heading into its sixth year and with no end to the fighting in sight, we joined forces with other United Nations humanitarian and development agencies to appeal for USD 7.73 billion in vital new funding to help 22.5 million people in Syria and across the region. The first aspect of the appeal is the Regional Refugee and Resilience Plan (3RP), led by UNHCR, which calls for USD 4.55 billion to support 4.8 million refugees in neighbouring countries and four million in the communities hosting them. The second aspect is the 2016 Syria Humanitarian Response Plan which seeks nearly USD 3.2 billion to provide humanitarian support and protection to 13.5 million people inside Syria.
+
+
+							p
+								| Over 4 million people have fled Syria since 2011, seeking safety in Lebanon, Jordan, Iraq and beyond. Millions more are displaced inside Syria and, as war continues, hope is fading fast.
+
+
+							p
+								| Turkey hosts over 2.7 million registered Syrians. The majority of them live in urban areas, with around 260,000 accommodated in the 23 refugee camps in the provinces of Hatay, Gaziantep, Kilis and Sanliurfa. In Lebanon, life is a daily struggle for many Syrian refugees, who have little or no financial resources. Around 70 per cent live below the poverty line on less than USD 3.84 per person per day. There are no formal refugee camps and, as a result, more than a million registered Syrians live in over 1,700 communities and locations across the country, often sharing small basic lodgings with other refugee families in overcrowded conditions. In Jordan, over 600,000 men, women and children are currently trapped in exile. Approximately 80 per cent of them live in urban areas, while more than 100,000 have found sanctuary at the camps of Za’atari and Azraq. Many have arrived with limited means to cover even basic needs, and those who could at first rely on savings or support from host families are now increasingly in need of help.
+
+
+							p
+								| Iraq has also seen a growing number of Syrians arriving, hosting nearly 25,000, while in Egypt UNHCR provides protection and assistance to more than 100,000. But although life in exile can be difficult, for Syrians still at home it is even harder.
+
+
+							strong.article-sammury
+								em Syria is the biggest humanitarian and refugee crisis of our time, a continuing cause of suffering for millions which should be garnering a groundswell of support around the world.
+
+								p Filippo Grandi, UNHCR High Commissioner

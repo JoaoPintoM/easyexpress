@@ -1,0 +1,34 @@
+extends ../layout3
+
+block content
+	.container
+
+		section.our-story.row
+			.col-xs-12
+				header.story-heading.section-header
+					if(lang == 'fr')
+						h2
+							| Nous travaillons en toute 
+							strong transparence
+					if(lang == 'en')
+						h2
+							| We work in total 
+							strong transparency
+				.row
+					.col-xs-12.col-sm-5
+						section.slider-wrap.flex-slide.flexslider
+							ul.slides
+								li
+									img(src='/assets/img/homepage/blog1.jpeg', alt='')
+								li
+									img(src='/assets/img/homepage/blog2.jpeg', alt='')
+					.col-xs-12.col-sm-7
+						strong.article-sammury
+							| #{__("trTxt")}
+						//- p
+						//- 	| We do not raise fund for ourselves. Indeed, we use all the funds that come through charity in the best of the best way in terms of holistic development of children of all age groups. Our team is relentlessly working day and night to ensure that there will no hassle for our fund donor.
+						//- p
+						//- 	| We work for children welfare, who are daily exploited and living in the condition deprived of healthy environment, proper eduction, food, cloth and medical care.
+						//- strong.border-none  #{__("teamTitle2")}
+
+
