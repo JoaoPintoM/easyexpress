@@ -271,30 +271,17 @@ exports.loggedfb = function(req, res){
 }
 
 
-var loginAndFinaliseRegistrationToken = function(req, res){
-	console.log('FINISH IT !');
-
-	// sendWelcomeEmail(req.user, req.lang);
-
-	return res.render('index', {
-		token: req.user.jwttoken,
-		userm: req.user.email,
-		categories: req.user.categories,
-		userid: req.user._id
-	});
-}
-
-
 var loginAndFinaliseRegistration = function(req, res){
 
-	sendWelcomeEmail(req.user, req.lang);
+	// sendWelcomeEmail(req.user, req.lang);
+	console.log('facile facile.')
 
 	req.login(req.user, function(err) {
 		if (err) {
 			res.render('500');
 		} else {
 
-			return res.render('/', {
+			return res.render('index', {
 				token: req.user.jwttoken,
 				userm: req.user.email,
 				categories: req.user.categories,
@@ -374,8 +361,6 @@ var sendVerifEmail = function(user){
 	});
 }
 
-
-
 exports.validationPoints = function(req, res){
 	if(!req.params.secret || !req.params.userId)
 		return res.redirect('/' + req.lang + '/');
@@ -436,7 +421,7 @@ exports.errorfblogin = function(req, res){
 				// 	userid: user._id
 				// });
 				req.user = user;
-				loginAndFinaliseRegistrationToken(req, res);
+				loginAndFinaliseRegistration(req, res);
 			}
 			else{
 				console.log('ici')
@@ -519,7 +504,7 @@ exports.fixfbuser = function(req, res){
 					// 	userid: user._id
 					// });
 					req.user = user;
-					loginAndFinaliseRegistrationToken(req, res);
+					loginAndFinaliseRegistration(req, res);
 
 		        }
 		      });
@@ -561,7 +546,7 @@ exports.loginPost = function(req, res) {
 			}
 			else {
 				req.user = user;
-				loginAndFinaliseRegistrationToken(req, res);
+				loginAndFinaliseRegistration(req, res);
 			}
 
 	});
@@ -636,7 +621,7 @@ exports.registerPost = function(req, res) {
 
 					req.user = user;
 
-					loginAndFinaliseRegistrationToken(req, res);
+					loginAndFinaliseRegistration(req, res);
 				}
 			});
 		}
@@ -811,7 +796,6 @@ exports.isAuthApi = function(req, res, next) {
 	}
 }
 
-
 exports.hasAuthorizationApi = function(roles) {
 	var _this = this;
 
@@ -827,7 +811,6 @@ exports.hasAuthorizationApi = function(roles) {
 		});
 	};
 };
-
 
 
 function SendResetPasswordEmail(userAddress, secret) {

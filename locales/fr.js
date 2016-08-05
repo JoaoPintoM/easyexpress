@@ -10,5 +10,6 @@
 	"youmustbelogged": "youmustbelogged",
 	"lConnectOn": "lConnectOn",
 	"rContinueWithFB": "rContinueWithFB",
-	"or": "or"
+	"or": "or",
+	"user_unauthorized": "user_unauthorized"
 }
