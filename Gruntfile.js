@@ -2,47 +2,26 @@ module.exports = function (grunt) {
 
 	grunt.initConfig({
 		concat: {
-			// options: {
-			//   separator: ';',
-			// },
 			js: {
 			  src: [
-				  'public/js/jquery.easing-1.3.min.js',
-				  'public/js/ie-emulation-modes-warning.js',
-				  'public/js/ie10-viewport-bug-workaround.js',
-				  'public/js/owlcarousel/owl.carousel.min.js',
-				  'public/js/owlcarousel/setting.js',
-				  'public/js/totop/jquery.ui.totop.js',
-				  'public/js/totop/setting.js',
-				  'public/js/custom.js'
+				  'public/js/example.js',
+				  'public/js/example2.js'
 			  ],
-			  dest: 'public/dist/charly.js',
+			  dest: 'public/dist/main.js',
 			},
 			css:{
 				src: [
-					'public/css/ie10-viewport-bug-workaround.css',
-					'public/css/font-awesome.min.css',
-					'public/css/overwrite.css',
-					'public/css/owl.carousel.css',
-					'public/css/owl.theme.css',
-					'public/css/style.css',
-					'public/css/rewardvpage.css'
+					'public/css/example.css',
+					'public/css/example2.css'
 				],
-			  	dest: 'public/dist/charly.css',
+			  	dest: 'public/dist/main.css',
 			}
 		},
 
-
-
 		uglify: {
-			chrome: {
-				files: {
-					'Extensions/chromestore/main.js': ['Extensions/chromestore/main-dev.js']
-				}
-			},
 			js: {
 				files: {
-					'public/dist/charly.min.js': ['public/dist/charly.js']
+					'public/dist/main.min.js': ['public/dist/main.js']
 				}
 			}
 		},
@@ -54,44 +33,25 @@ module.exports = function (grunt) {
 			},
 			target: {
 				files: {
-					'public/dist/charly.min.css': ['public/dist/charly.css']
+					'public/dist/main.min.css': ['public/dist/main.css']
 				}
 			}
 		},
-
-
 
 		csslint: {
 		  strict: {
 		    options: {
 		      import: 2
 		    },
-		    src: ['public/dist/charly.css']
+		    src: ['public/dist/main.css']
 		  },
 		  lax: {
 		    options: {
 		      import: false
 		    },
-		    src: ['public/dist/charly.css']
+		    src: ['public/dist/main.css']
 		  }
 		},
-
-
-
-
-		// uglify: {
-		// 	options: {
-		//       mangle: false,
-		//       compress: true
-		//     },
-		// 	chrome: {
-		// 		files: {
-		// 			'Extensions/chromestore/main.js': ['Extensions/chromestore/main-dev.js']
-		// 		}
-		// 	}
-		// },
-
-
 
 		watch: {
 			js: {
@@ -104,20 +64,10 @@ module.exports = function (grunt) {
 			},
 
 			uglify: {
-				files: ['public/dist/charly.js'],
+				files: ['public/dist/main.js'],
 				tasks: ['uglify:js'],
-			},
-			chrome:{
-				files:['Extensions/chromestore/main-dev.js'],
-				tasks:['uglify:chrome'],
 			}
-
 		},
-
-
-
-
-
 	});
 
 
@@ -128,6 +78,5 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-csslint');
 
 	grunt.registerTask('default', ['concat', 'uglify:js',  'watch']);
-
-	grunt.registerTask('chrome', [ 'uglify:chrome', 'watch:chrome']);
+	grunt.registerTask('chrome', [ 'uglify:chrome']);
 };
