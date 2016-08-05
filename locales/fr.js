@@ -11,5 +11,6 @@
 	"lConnectOn": "lConnectOn",
 	"rContinueWithFB": "rContinueWithFB",
 	"or": "or",
-	"user_unauthorized": "user_unauthorized"
+	"user_unauthorized": "user_unauthorized",
+	"loggedout": "loggedout"
 }
